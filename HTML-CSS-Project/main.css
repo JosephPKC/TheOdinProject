@@ -1,0 +1,106 @@
+.bar {
+    list-style-type: none;
+    margin: 10px;
+    padding: 5px;
+}
+
+.bar-item {
+    float: left;
+}
+
+.bar-button {
+    display: block;
+    padding: 10px 14px;
+}
+
+.button-text {
+    text-decoration: none;
+    font-size: 13px;
+    font-family: sans-serif;
+}
+
+.bar-button:hover {
+    text-decoration: underline;
+}
+
+.push-right {
+    float: right;
+}
+
+.sign-in {
+    background-color: rgb(70, 126, 206);
+    color: white;
+    border-radius: 3px 3px 3px 3px;
+    font-weight: bold;
+}
+
+.upper-mid {
+    width: 100%;
+}
+
+.logo {
+    display: block;
+    margin: 200px auto;
+}
+
+.search-bar {
+    display: block;
+    margin: -160px auto;
+    height: 30px;
+    width: 450px;
+    border: 1px hidden;
+    box-shadow: 1px 1px 3px 1px gray;
+    border-radius: 1px 1px 1px 1px;
+}
+
+.search-voice {
+    height: 22px;
+    width: 22px;
+    display: block;
+    position: relative;
+    top: 133px;
+    left: 655px;
+}
+
+.lower-mid {
+    width: 100%;
+    position: relative;
+    top: 50px;
+    margin: 0 auto;
+}
+
+.search-button {
+    margin: 0 10px;
+    position: relative;
+    left: 300px;
+    box-shadow: 1px 1px 3px 1px lightgrey;
+    border-radius: 1px 1px 1px 1px;
+    width: 120px;
+    text-align: center;
+    font-weight: bold;
+    background-color: #efefef;
+    color: grey;
+}
+
+.blurb {
+    text-decoration: none;
+    position: relative;
+    top: 30px;
+    left: -70px;
+    /*box-shadow: 1px 1px 3px 1px lightgrey;*/
+}
+
+.blurb:hover {
+    text-decoration: underline;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: lightgrey;
+    border: 1px solid lightgrey;
+    margin: 0;
+    padding: 0;
+    /*height: 30px;*/
+}
