@@ -1,0 +1,28 @@
+.grid {
+    display: grid;
+    grid-row-gap: 1px;
+    grid-column-gap: 1px;
+    height: 800px;
+    width: 800px;
+    margin: auto auto;
+}
+
+.grid-square {
+    border: 1px solid black;
+}
+
+.control-bar {
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.control {
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    margin: 10px;
+    width: 5%;
+    border: 1px solid gray;
+    text-align: center;
+}
