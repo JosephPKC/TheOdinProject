@@ -1,0 +1,87 @@
+.container {
+    height: 600px;
+    width: 600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.control {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.session {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+}
+
+.break {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+}
+
+.time-block {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 2;
+    width: 70%;
+    height: 200px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+}
+
+.text {
+    text-align: center;
+    font-family: "Courier New";
+    font-weight: bold;
+}
+
+.increment {
+    float: left;
+}
+
+.decrement {
+    float: right;
+}
+
+.start {
+    position: absolute;
+    top: 40px;
+    left: 120px;
+}
+
+.restart {
+    position: absolute;
+    top: 40px;
+    right: 120px;
+}
+
+.pause {
+    position: absolute;
+    bottom: 40px;
+    left: 120px;
+}
+
+.stop {
+    position: absolute;
+    bottom: 40px;
+    right: 120px;
+}
+
+.current-time {
+    margin: auto auto;
+    font-size: 24px;
+}
+
+.number {
+    font-size: 18px;
+}
+
+.b:hover {
+    color: darkgray;
+    cursor: pointer;
+}
