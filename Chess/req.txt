@@ -1,0 +1,34 @@
+Command Line Chess for 2 players
+
+-Prevent illegal moves.
+-Declare check or checkmate automatically.
+-Serializable board for saving and loading.
+-Modular, object-oriented approach.
+-AI that makes random legal moves.
+-Fully utilizes all of the chess rules. Including:
+    -Castling
+    -Check, Checkmate, and Stalemate
+    -Pooled Time
+    -Initial Pawn Double Move
+    -En Passant
+    -Pawn Promotion
+    -Move History
+
+::Basic Object Guideline::
+-Board: An 8x8 Grid with markings for each cell. The Board has the positions of every single Piece on the board.
+-Piece: A piece that moves about the Board. The piece has a way to see if a move is valid.
+    -Pawn - Moves once forward. Has a few special rules.
+        -Double Move
+        -En Passant
+        -Promotion
+    -Rook - Moves horizontally or vertically.
+    -Bishop - Moves diagonally.
+    -Knight - Moves in a 4-size L shape over other pieces.
+    -Queen - Combination of Rook and Bishop
+    -King - Moves once in any direction. Has a few special rules.
+        -Check
+        -Mate
+        -Stalemate
+-Chess: The Game controller. Controls the flow, determining whose turn it is, asks pieces whether a move is valid, and requeries for a valid move, checks if the game is over, checks for check, mate, stalemate.
+-Recorder: Records moves played. Just records each VALID move played.
+-Serializer: Serializes the board, the game state, and the records to JSON. Saves the board state, game state, and records to JSON, and loads all from JSON.
