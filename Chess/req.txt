@@ -29,6 +29,23 @@ Command Line Chess for 2 players
         -Check
         -Mate
         -Stalemate
--Chess: The Game controller. Controls the flow, determining whose turn it is, asks pieces whether a move is valid, and requeries for a valid move, checks if the game is over, checks for check, mate, stalemate.
+-Chess: The Game controller. Controls the flow, determining whose turn it is, asks pieces whether a move is valid, and re-queries for a valid move, checks if the game is over, checks for check, mate, stalemate.
 -Recorder: Records moves played. Just records each VALID move played.
 -Serializer: Serializes the board, the game state, and the records to JSON. Saves the board state, game state, and records to JSON, and loads all from JSON.
+
+-Checking if a move is valid.
+    -Check the params to see if they are within board limits.
+    -Check the source to see if there is an owned piece there.
+    -Check if the King is currently under check, and if the piece to move is the King.
+    -Check the params to see if they are not the same.
+    -Check the params to see if the piece is allowed to move in this way.
+        :Same Row/Column - Rook, Queen, Pawn (Only One space difference, or two if initial).
+        :Diagonal - Bishop, Queen, Pawn (Only if the destination has an enemy, and if forward, or if in en passant)
+        :4-step L - Knight only
+        :One Space Any - King
+    -Check if this move will endanger the king. (The King has bodyguards (8, 1 for each direction). Update a temporary version of the bodyguards with this movie, and check all of the empty directions to see if there is a valid enemy in line of sight). This check only occurs if the piece to be moved has line of sight with the king.
+-Checking for check, checkmate, stalemate.
+    -Check the King's empty bodyguards to see if there is a valid enemy in one of the directions (An enemy who can move in that direction has line of sight).
+    -If there is AT LEAST ONE enemy with direct line of sight with the King AND can move to the king's space in a turn, then the King is under Check.
+    -If the King has no moves that remove check, it is a checkmate. (Check each available move for the king (at most 8). For each move, check if the king is still under check. If there is AT LEAST ONE move that clears the check, the king is not under checkmate.
+    -If the King is NOT under check, but there are NO moves, it is a stalemate.
